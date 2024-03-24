@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+  <div id="navbar-container"></div>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="images/MM001.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/MM002.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="images/MM003.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/BC01.png" style="width:100%">
+        </div>
+        
+    </div>
+    <br>
+        
+    <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+    </div>
+
+    <div class="line-with-dots">
+      <span class="dot"></span>
+      <hr class="line">
+      <span class="dot"></span>
+    </div>
+
+
+    <div class="card-2-container">
+      
+      <h2 class="title-1">Our <b>BEST SELLER</b> item</h2>
+      
+      <div class="card-container">
+        <div class="card">
+            <img src="images/A001.png" alt="Card 1" class="card-image">
+            <div class="card-content">
+                <h2>Casio Vintage AQ-800EC</h2>
+                <p>RM 500.00</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/B003.png" alt="Card 2" class="card-image">
+            <div class="card-content">
+                <h2>Short Sleeve Patchwork T-Shirt</h2>
+                <p>RM 150.00</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/A005.png" alt="Card 3" class="card-image">
+            <div class="card-content">
+                <h2>VINTAGE TREE PATCH HAT</h2>
+                <p>RM 100.00</p>
+            </div>
+        </div>
+    </div>
+    <div class="view-all-button">
+      <a href="product.html" class="button-89" role="button">View All</a>
+
+  </div>
+</div>
+    <div class="line-with-dots">
+      <span class="dot"></span>
+      <hr class="line">
+      <span class="dot"></span>
+    </div>
+ 
+
+    <h2 class="title">See What <b>Our Customers</b> Say About Us</h2>
+
+    <div class = "rating">
+      <th><b>Ratingㅤ</b></th>
+      <span><i class = "fas fa-star"></i></span>
+      <span><i class = "fas fa-star"></i></span>
+      <span><i class = "fas fa-star"></i></span>
+      <span><i class = "fas fa-star"></i></span>
+      <span><i class = "fas fa-star">ㅤ</i></span>
+      <th><b>Based On 23059 Customer</b></th>
+  </div>
+    <div class="slider">
+      <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav"/>
+      <input type="radio" name="slider" title="slide2" class="slider__nav"/>
+      <input type="radio" name="slider" title="slide3" class="slider__nav"/>
+      <input type="radio" name="slider" title="slide4" class="slider__nav"/>
+      
+      <div class="slider__inner">
+        <div class="slider__contents">
+          <img src="images/F001.jpeg" class="slider__image" alt="Your Image">
+          <h2 class="slider__caption">AIMAN</h2>
+          <p class="slider__txt">Thank you for the good quality and services. thumbups!!!</p>
+        </div>
+        <div class="slider__contents">
+          <img src="images/F002.jpeg" class="slider__image" alt="Your Image">
+          <h2 class="slider__caption">ABDUL</h2>
+          <p class="slider__txt">I have been looking for this item for a very long time, thankfully for TEROKA because having this kind of product in their store</p>
+        </div>
+        <div class="slider__contents">
+          <img src="images/F003.jpeg" class="slider__image" alt="Your Image">
+          <h2 class="slider__caption">SEW YOO SUUN</h2>
+          <p class="slider__txt">You all services is very good meh, me love me love</p>
+        </div>
+        <div class="slider__contents">
+          <img src="images/F004.jpeg" class="slider__image" alt="Your Image">
+          <h2 class="slider__caption">SRI KETCHUMY</h2>
+          <p class="slider__txt">Good store to find out a aesthetic and rare stuff among thrift community in Malaysia. XD</p>
+        </div>
+
+      </div>
+    </div>
+    
+    <div id="footer-container"></div>
+
+
+    <div class="copyright">
+      <b>copyright @ teroka</b>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 4000); // Change image every 4 seconds
+        }
+
+        fetch('navbar.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('navbar-container').innerHTML = html;
+          });
+
+        // load footer content 
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(html => {
+            document.getElementById('footer-container').innerHTML = html;
+            });
+        </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

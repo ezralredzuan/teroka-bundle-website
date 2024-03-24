@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="event.css">
+  <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 1; 
+  cursor: pointer; 
+}
+.column img:hover {
+  opacity: 0.5;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  ;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+  cursor: pointer;
+}
+
+    /* Rounded border */
+    hr.rounded {
+      border-top: 8px solid #bbb;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="navbar-container"></div>
+
+
+<!-- Header -->
+<div class="header">
+  <h1>Event</h1>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="images/es1.jpg" style="width:100%">
+    <img src="images/es11.jpeg" style="width:100%">
+
+
+  </div>
+  <div class="column">
+    <img src="images/es4.jpg" style="width:100%">
+    <img src="images/es12.jpg" style="width:100%">
+   
+   
+  </div>  
+  <div class="column">
+    <img src="images/es10.webp" style="width:100%">
+    <img src="images/es7.jpg" style="width:100%">
+  
+   
+  </div>
+  <div class="column">
+    <img src="images/es13.jpg" style="width:100%">
+    <img src="images/es5.jpg" style="width:100%">
+    <img src="images/es8.png" style="width:100%">
+
+
+  
+   
+  </div>
+</div>
+
+<p></p>
+<hr class=""  >
+
+<div style="text-align:center">
+  <h2>Teroka Event's</h2>
+  <p>Click on the images below:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="images/eve1.png" alt="Mega Bundle Expo" style="width:100%" onclick="myFunction(this);">
+    <p>#Bising Gig<p>
+
+  </div>
+  <div class="column">
+    <img src="images/eve2.jpeg" alt="Bundle X Gig " style="width:100%" onclick="myFunction(this);">
+    <p>Mega Bundle Expo<p></p>
+
+  </div>
+  <div class="column">
+    <img src="images/eve3.jpg" alt="Kabut Sale" style="width:100%" onclick="myFunction(this);">
+    <p>Klang Kabut Sales<p> 
+  </div>
+  <div class="column">
+    <img src ="images/eve4.jpg" alt="Bundle X kopi" style="width:100%" onclick="myFunction(this);">
+    <p>Bundle X Kopi<p>
+
+    </p>
+  </div>
+</div>
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<div id="footer-container"></div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+
+fetch('navbar.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('navbar-container').innerHTML = html;
+      });
+
+// load footer content 
+fetch('footer.html')
+            .then(response => response.text())
+            .then(html => {
+            document.getElementById('footer-container').innerHTML = html;
+            });
+</script>
+
+</body>
+</html>

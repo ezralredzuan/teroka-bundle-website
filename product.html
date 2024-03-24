@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="product.css">
+        <!-- font awesome -->
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <div id="navbar-container"></div>
+
+        <div class = "products">
+            <div class = "container">
+                <h1 class = "lg-title">Product Of Teroka</h1>
+                <form>
+                    <input type="text" class="search-bar" id="search-input" placeholder="Search...">
+                    <button type="button" class="search-button" onclick="searchProducts()">Search</button>                </form>
+
+                
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart" onclick="toggleCart()"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                    
+                    <!-- Cart Popup -->
+                <div class="cart-popup" id="cart-popup">
+                    <div class= "cart-content">
+                    <div class="Header">
+                        <h3 class="Heading">Shopping Cart</h3>
+                        <h5 class="Action" onclick="removeAllItems()">Remove all</h5>
+                    </div>
+                    <div class="cart-items">
+                        <table class="cart-items-table">
+                            <!-- Table content will be added by the JavaScript code -->
+                        </table>
+                    </div><br>
+                    <div class="cart-empty-message">Cart is empty, continue shopping.</div><br>
+                    <div class="cart-total">
+                        <p>Total: <span id="total-price">RM 0.00</span></p><br>
+                    </div>
+                    <div class="checkout-button">
+                        <button class="btn-check" onclick="checkout()">Checkout</button>
+                    </div>
+                </div>
+
+                </div>
+                
+                <div class = "product-items">
+                    <!-- Cart Icon -->
+                    
+
+                    <!-- single product -->
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "images/A001.png" alt = "product image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type="button" class="btn-cart" onclick="addToCart('Casio Vintage AQ-800EC', 'RM 500.00', 'images/A001.png')">
+                                    add to cart
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                                <button type="button" class="btn-buy" onclick="buyNow('Casio Vintage AQ-800EC', 'RM 500.00', 'images/A001.png')">
+                                    buy now
+                                    <span><i class="fas fa-shopping-cart"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">ACCESSORIES</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">Casio Vintage AQ-800EC</a>
+                            <p class = "product-price">RM 500.00</p>
+                        </div>
+
+                    </div>
+                    <!-- end of single product -->
+                    <!-- single product -->
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "images/A002.png" alt = "product image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type="button" class="btn-cart" onclick="addToCart('Casio Vintage Style Watch A100WEGG-1AEF RRP', 'RM 450.00', 'images/A002.png')">
+                                    add to cart
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                                <button type="button" class="btn-buy" onclick="buyNow('Casio Vintage Style Watch A100WEGG-1AEF RRP', 'RM 450.00', 'images/A002.png')">
+                                    buy now
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">ACCESSORIES</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">Casio Vintage Style Watch A100WEGG-1AEF RRP</a>
+                            <p class = "product-price">RM 450.00</p>
+
+                        </div>
+                    </div>
+                    <!-- end of single product -->
+                    <!-- single product -->
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "images/A003.png" alt = "product image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type="button" class="btn-cart" onclick="addToCart('Ray Ban RB 3016 990/58 RED HAVANA Sunglasses', 'RM 750.00', 'images/A003.png')">
+                                    add to cart
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                                <button type="button" class="btn-buy" onclick="buyNow('Ray Ban RB 3016 990/58 RED HAVANA Sunglasses', 'RM 750.00', 'images/A003.png')">
+                                    buy now
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">ACCESSORIES</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">Ray Ban RB 3016 990/58 RED HAVANA Sunglasses</a>
+                            <p class = "product-price">RM 750.00</p>
+                        </div>
+                    </div>
+                    <!-- end of single product -->
+                    <!-- single product -->
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "images/A004.png" alt = "product image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type="button" class="btn-cart" onclick="addToCart('THE POUR ME WINE VINTAGE HAT', 'RM 100.00', 'images/A004.png')">
+                                    add to cart
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                                <button type="button" class="btn-buy" onclick="buyNow('THE POUR ME WINE VINTAGE HAT', 'RM 100.00', 'images/A004.png')">
+                                    buy now
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">ACCESSORIES</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">THE POUR ME WINE VINTAGE HAT</a>
+                            <p class = "product-price">RM 100.00</p>
+                        </div>
+                    </div>
+                    <!-- end of single product -->
+                    <!-- single product -->
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "images/A005.png" alt = "product image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type="button" class="btn-cart" onclick="addToCart('VINTAGE TREE PATCH HAT', 'RM 100.00', 'images/A005.png')">
+                                    add to cart
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                                <button type="button" class="btn-buy" onclick="buyNow('VINTAGE TREE PATCH HAT', 'RM 100.00', 'images/A005.png')">
+                                    buy now
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">ACCESSORIES</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">VINTAGE TREE PATCH HAT</a>
+                            <p class = "product-price">RM 100.00</p>
+                        </div>
+                    </div>
+                    <!-- end of single product -->
+                    <!-- single product -->
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "images/B001.png" alt = "product image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type="button" class="btn-cart" onclick="addToCart('The Nike and The Beatles Revolution Collaboration, 1987', 'RM 150.00', 'images/B001.png')">
+                                    add to cart
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                                <button type="button" class="btn-buy" onclick="buyNow('The Nike and The Beatles Revolution Collaboration, 1987', 'RM 150.00', 'images/B001.png')">
+                                    buy now
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">clothing</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">The Nike and The Beatles Revolution Collaboration, 1987</a>
+                            <p class = "product-price">RM 150.00</p>
+                        </div>
+                    </div>
+                    <!-- end of single product -->
+                    <!-- single product -->
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "images/B002.png" alt = "product image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type="button" class="btn-cart" onclick="addToCart('The Rolling Stones Retro Licks Some Girls T-Shirt Official Vintage Black Cotton', 'RM 300.00', 'images/B002.png')">
+                                    add to cart
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                                <button type="button" class="btn-buy" onclick="buyNow('The Rolling Stones Retro Licks Some Girls T-Shirt Official Vintage Black Cotton', 'RM 300.00', 'images/B002.png')">
+                                    buy now
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">clothing</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">The Rolling Stones Retro Licks Some Girls T-Shirt Official Vintage Black Cotton</a>
+                            <p class = "product-price">RM 300.00</p>
+                        </div>
+                    </div>
+                    <!-- end of single product -->
+                    <!-- single product -->
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "images/B003.png" alt = "product image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type="button" class="btn-cart" onclick="addToCart('Mens Summer Hippie Geometric Casual Shirt Short Sleeve Patchwork T-Shirt Tee Top', 'RM 150.00', 'images/B003.png')">
+                                     add to cart 
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                                <button type="button" class="btn-buy" onclick="buyNow('Mens Summer Hippie Geometric Casual Shirt Short Sleeve Patchwork T-Shirt Tee Top', 'RM 150.00', 'images/B003.png')">
+                                     buy now 
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">clothing</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">Mens Summer Hippie Geometric Casual Shirt Short Sleeve Patchwork T-Shirt Tee Top</a>
+                            <p class = "product-price">RM 150.00</p>
+                        </div>
+                    </div>
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "images/B004.png" alt = "product image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type="button" class="btn-cart" onclick="addToCart('VINTAGE 1970S EAGLES HOTEL CALIFORNIA T-SHIRT', 'RM 300.00', 'images/B004.png')">
+                                    add to cart
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                                <button type="button" class="btn-buy" onclick="buyNow('VINTAGE 1970S EAGLES HOTEL CALIFORNIA T-SHIRT', 'RM 300.00', 'images/B004.png')">
+                                    buy now
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">clothing</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">VINTAGE 1970'S EAGLES HOTEL CALIFORNIA T-SHIRT</a>
+                            <p class = "product-price">RM 300.00</p>
+                        </div>
+                    </div>
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "images/O001.png" alt = "product image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type="button" class="btn-cart" onclick="addToCart('Vintage 90s Y2K Style Cotton Sugars Womens Medium Pastel Colors Jacket', 'RM 450.00', 'images/O001.png')">
+                                    add to cart
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                                <button type="button" class="btn-buy" onclick="buyNow('Vintage 90s Y2K Style Cotton Sugars Womens Medium Pastel Colors Jacket', 'RM 450.00', 'images/O001.png')">
+                                    buy now
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">OUTERWEAR</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">Vintage 90's Y2K Style Cotton Sugar's Women's Medium Pastel Colors Jacket</a>
+                            <p class = "product-price">RM 450.00</p>
+                        </div>
+
+                    </div>
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "images/O002.png" alt = "product image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type="button" class="btn-cart" onclick="addToCart('Vintage 90s Mens Starter Jacket Size Large Purple/Green/Orange', 'RM 750.00', 'images/O002.png')">
+                                    add to cart
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                                <button type="button" class="btn-buy" onclick="buyNow('Vintage 90s Mens Starter Jacket Size Large Purple/Green/Orange', 'RM 750.00', 'images/O002.png')">
+                                    buy now
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">OUTERWEAR</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">Vintage 90s Mens Starter Jacket Size Large Purple/Green/Orange</a>
+                            <p class = "product-price">RM 750.00</p>
+                        </div>
+
+                    </div>
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "images/P001.png" alt = "product image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type="button" class="btn-cart" onclick="addToCart('DOUBLE KNEE PANT | DUSTY H BROWN', 'RM 600.00', 'images/P001.png')">
+                                    add to cart
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                                <button type="button" class="btn-buy" onclick="buyNow('DOUBLE KNEE PANT | DUSTY H BROWN', 'RM 600.00', 'images/P001.png')">
+                                    buy now
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">PANTS</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">DOUBLE KNEE PANT | DUSTY H BROWN</a>
+                            <p class = "product-price">RM 600.00</p>
+                        </div>
+
+
+                    </div>
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "images/P002.png" alt = "product image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type="button" class="btn-cart" onclick="addToCart('DARUMA BUDDIES DAICOCK PRINT SLIM FIT JEANS', 'RM 500.00', 'images/P002.png')">
+                                    add to cart
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                                <button type="button" class="btn-buy" onclick="buyNow('DARUMA BUDDIES DAICOCK PRINT SLIM FIT JEANS', 'RM 500.00', 'images/P002.png')">
+                                    buy now
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">PANTS</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">DARUMA BUDDIES DAICOCK PRINT SLIM FIT JEANS</a>
+                            <p class = "product-price">RM 500.00</p>
+                        </div>
+                    </div>
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "images/P003.png" alt = "product image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type="button" class="btn-cart" onclick="addToCart('CARHARTT WIP MONTANA PANT | SMOKE GREEN', 'RM 600.00', 'images/P003.png')">
+                                    add to cart
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                                <button type="button" class="btn-buy" onclick="buyNow('CARHARTT WIP MONTANA PANT | SMOKE GREEN', 'RM 600.00', 'images/P003.png')">
+                                    buy now
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">PANTS</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">CARHARTT WIP MONTANA PANT | SMOKE GREEN
+                                </a>
+                            <p class = "product-price">RM 600.00</p>
+                        </div>
+                    </div>
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "images/P004.png" alt = "product image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type="button" class="btn-cart" onclick="addToCart('Carhartt × Japanese Brand × Vintage', 'RM 200.00', 'images/P004.png')">
+                                    add to cart
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                                <button type="button" class="btn-buy" onclick="buyNow('Carhartt × Japanese Brand × Vintage', 'RM 200.00', 'images/P004.png')">
+                                    buy now
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">PANTS</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">Carhartt × Japanese Brand × Vintage
+                                </a>
+                            <p class = "product-price">RM 200.00</p>
+                        </div>
+                    </div>
+                    <!-- end of single product -->
+                </div>
+            </div>
+        </div>
+
+        <div id="footer-container"></div>
+
+        <script>
+            // Define an array to store cart items
+            let cartItems = [];
+
+            function addToCart(productName, productPrice, productImage) {
+                // Check if the item with the same name already exists in the cart
+                const existingItem = cartItems.find(item => item.name === productName);
+
+                if (existingItem) {
+                    // If the item already exists, increase the quantity
+                    existingItem.quantity++;
+                } else {
+                    // If the item is not in the cart, add it as a new item with a quantity of 1
+                    cartItems.push({ name: productName, price: productPrice, image: productImage, quantity: 1 });
+                }
+
+                updateCart();
+
+                // Store cart items in localStorage
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+            }
+
+          // Load navbar content using JavaScript
+
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+            document.getElementById('navbar-container').innerHTML = html;
+            });
+
+        // load footer content 
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(html => {
+            document.getElementById('footer-container').innerHTML = html;
+            });
+
+        function updateCart() {
+            const cartCount = document.querySelector('.cart-count');
+            const cartPopup = document.querySelector('.cart-popup');
+            const cartItemsTable = document.querySelector('.cart-items-table');
+            const cartEmptyMessage = document.querySelector('.cart-empty-message');
+            const totalDisplay = document.getElementById('total-price');
+
+            // Update the cart count
+            cartCount.textContent = cartItems.length;
+
+            if (cartItems.length === 0) {
+                // If the cart is empty, display the empty cart message and hide the table
+                cartItemsTable.style.display = 'none';
+                cartEmptyMessage.style.display = 'block';
+            } else {
+                // If the cart has items, display the table and hide the empty cart message
+                cartItemsTable.style.display = 'table'; // Display the table as a table
+                cartEmptyMessage.style.display = 'none';
+            }
+
+            // Clear the previous items in the table
+            cartItemsTable.innerHTML = '';8
+
+            let totalPrice = 0;
+
+            // Create the table header
+            const tableHeader = document.createElement('tr');
+            tableHeader.innerHTML = 
+            `
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>ㅤ</th>
+                <th>Quantity</th>
+                <th>ㅤ</th>
+                <th>Total</th>
+                <th>ㅤ</th>
+            `;
+            cartItemsTable.appendChild(tableHeader);
+
+            // Create rows for each cart item
+            cartItems.forEach((item, index) => {
+                const cartItemRow = document.createElement('tr');
+                cartItemRow.innerHTML = `
+                    <td><img src="${item.image}" class="cart-item-image" alt="Product Image"></td>
+                    <td>${item.name}</td>
+                    <td>${item.price}</td>
+                    <td><button class="quantity-control" onclick="decreaseQuantity(${index})">-</button></td>
+                    <td>
+                        <span class="quantity">${item.quantity}</span>
+                    </td>
+                    <td><button class="quantity-control" onclick="increaseQuantity(${index})">+</button></td>
+
+                    <td>${(parseFloat(item.price.replace(/[^\d.]/g, '')) * item.quantity).toFixed(2)}</td>
+                    <td><button class="remove-button" onclick="removeItem(${index})"><i class="fas fa-trash"></i></button></td>
+                `;
+                cartItemsTable.appendChild(cartItemRow);
+
+                totalPrice += parseFloat(item.price.replace(/[^\d.]/g, '')) * item.quantity;
+            });
+
+            // Update the total price
+            totalDisplay.textContent = 'RM ' + totalPrice.toFixed(2);
+
+            // Show the cart popup
+            cartPopup.style.display = 'block';
+
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        }
+        
+
+        function decreaseQuantity(index) {
+            if (cartItems[index].quantity > 1) {
+                cartItems[index].quantity--;
+                updateCart();
+            }
+        }
+
+        function increaseQuantity(index) {
+            cartItems[index].quantity++;
+            updateCart();
+        }
+            
+            function toggleCart() {8
+                const cartPopup = document.querySelector('.cart-popup');
+                if (cartPopup.style.display === 'block') {
+                    cartPopup.style.display = 'none';
+                } else {
+                    cartPopup.style.display = 'block';
+                }
+            }
+
+            // Remove item from the cart
+            function removeItem(index) {
+                cartItems.splice(index, 1);
+                updateCart();
+            }
+
+            // Remove all items from the cart
+            function removeAllItems() {
+                cartItems = [];
+                updateCart();
+            }
+            
+            // Checkout function (you can customize this function for your needs)
+            function checkout() {
+                window.location.href = 'checkout.html';
+
+            }
+            function buyNow(productName, productPrice, productImage) {
+                addToCart(productName, productPrice, productImage);
+                // Redirect to the checkout page
+                window.location.href = 'checkout.html';
+            }
+             // Function to handle product search
+            function searchProducts() {
+                const searchInput = document.getElementById('search-input').value.toLowerCase();
+                const productItems = document.querySelectorAll('.product');
+
+                productItems.forEach((product) => {
+                    const productName = product.querySelector('.product-name').textContent.toLowerCase();
+                    if (productName.includes(searchInput)) {
+                        product.style.display = 'block'; // Display the product
+                    } else {
+                        product.style.display = 'none'; // Hide the product
+                    }
+                });
+            }
+            // Add an event listener to the search input to trigger the search function on input change
+            document.getElementById('search-input').addEventListener('input', searchProducts);
+
+            document.body.addEventListener('click', function (event) {
+                const cartPopup = document.getElementById('cart-popup');
+                const cartIcon = document.querySelector('.fa-shopping-cart');
+
+                // Check if the click event target is not inside the cart container and not the cart icon,
+                // and also not one of the buttons inside the cart container
+                if (!cartPopup.contains(event.target) && event.target !== cartIcon && event.target.tagName !== 'BUTTON') {
+                    // Close the cart if it's open
+                    if (cartPopup.style.display === 'block') {
+                        toggleCart();
+                    }
+                }
+            });
+
+            </script>
+        
+    </body>
+</html>

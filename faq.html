@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="faq.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <div id="navbar-container"></div>
+    <div id="faq">
+      <h1 id="title">FAQ</h1>
+      <ul>
+        <li>
+          <input type="checkbox" checked>
+          <i></i>
+          <h2>Does Teroka Do Delivery?</h2>
+          <p>
+            We DO NOT make deliveries. If you are planning to purchase bulky items like furniture, we advise you to arrange your own transportation
+          </p>
+        </li>
+
+        <li>
+          <input type="checkbox" checked>
+          <i></i>
+          <h2>How to purchase?</h2>
+          <p>
+            You have to made your selections in our product page and add your item to add to cart.After that,we would like us to hold your purchases while you continue with your shopping . 
+            The items in your add to cart will appear to list during you want make  payment and after payment you will go back to home page and a notification will pop up  say you successful make a payment or unsuccessful.
+          </p>
+        </li>
+
+        <li>
+          <input type="checkbox" checked>
+          <i></i>
+          <h2>Payment Method?</h2>
+          <p>Teroka Store store accepts CASH and payment via Credit Card or Debit Card</p>
+        </li>
+
+        <li>
+          <input type="checkbox" checked>
+          <i></i>
+          <h2>How Often Teroka Restock?</h2>
+          <p>
+            Any casual visitor who stepped into Teroka store might not have noticed any changes in our product offering. In fact, we restock our goods daily, and restocking is carried out almost  every day. 
+            Our goods move off the shelves quite quickly, hence most items on display are less than a week old.
+  
+            Our shipment of goods arrived at Port Klang weekly. After processing and cleaning, goods are forwarded to our warehouse before reaching our JJJ store.
+          </p>
+        </li>
+
+        <li>
+          <input type="checkbox" checked>
+          <i></i>
+          <h2>Product</h2>
+          <p>
+            All of our items already selector and in a good condition. 
+            We import our item from Japan and USA. 
+            It starting with upper, bottom and accessories. 
+            All of items ,It is hot bargain and limited. 
+          </p>
+        </li>
+
+        <li>
+          <input type="checkbox" checked>
+          <i></i>
+          <h2>We Only Sell, We Dont Buy Policy?</h2>
+          <p> 
+            Many businesses have enquired if we purchase goods from them. The answer is, NO WE DO NOT. 
+            Teroka Store is unique, as we do not have a Purchasing Department.
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <br><br>
+
+    <div id="footer-container"></div>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+
+      fetch('navbar.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('navbar-container').innerHTML = html;
+      });
+
+      // load footer content 
+      fetch('footer.html')
+                  .then(response => response.text())
+                  .then(html => {
+                  document.getElementById('footer-container').innerHTML = html;
+      });
+      
+      // document.addEventListener('DOMContentLoaded', function () {
+      //     const accordions = document.querySelectorAll('.accordion');
+
+      //     accordions.forEach(function (accordion) {
+      //         accordion.addEventListener('click', function () {
+      //             this.classList.toggle('active');
+                  
+      //             const content = this.querySelector('.accordion-content');
+      //             if (content.style.display === 'block') {
+      //                 content.style.display = 'none';
+      //             } else {
+      //                 content.style.display = 'block';
+      //             }
+      //         });
+      //     });
+      // });
+
+    </script>
+
+  </body>
+</html>

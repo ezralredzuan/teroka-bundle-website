@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+  <body>
+
+    <div id="navbar-container"></div>
+
+    <div class=about>
+      <img src="images/aboutus.jpg">
+    </div><br><br>
+
+    <div class="boxes card">
+      <div class="card-content">
+        <p><b>Teroka store starting from Mr zain with his two best friend Mr Han and Ezral  who just love to going thrift and want pursue to create a store and platform for people find selecting item from thrifting.Three of them starting  open Teroka storefor business at 2021 after pandemic covid at Ampang,Kuala Lumpur . on March 18. The Teroka store is unique in that because another selling item from thrifting we also make our own product which is 100% from local.</b></p>
+      </div>
+  </div><br><br>
+
+  <div class="line-with-dots">
+    <hr class="line">
+    <i class="fa fa-close" style="font-size:24px"></i>
+    <hr class="line">
+  </div>
+  
+    <div class="bg-img">
+      <br><br>
+      <form action="/action_page.php" class="container">
+        <h1>What is Teroka???</h1>
+        <b>Teroka is word from malay language bring meaning find something or explore. <b>
+      </form>
+    </div>
+ 
+    <div class="store">
+      <div class="column-1">
+        <img class="stores-img" src="images/BG01.jpeg">
+      </div>
+      <div class="column-2">
+        <div class="store-desc card">
+          <div class="card-content">
+            <th>Thriftcore fashion, (also known as Thrift Store Chic) is a style of dressing where clothes are cheap and/or used. Clothes are often bought from thrift stores such as the Salvation Army, Goodwill, or Value Village. Common styles may include styles by decade.</th>
+          </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="line-with-dots">
+      <hr class="line">
+      <i class="fa fa-close" style="font-size:24px"></i>
+      <hr class="line">
+    </div>
+
+    <div id="footer-container"></div>
+
+    <p>.</p>
+    <script>
+              fetch('navbar.html')
+              .then(response => response.text())
+              .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+              });
+
+              // load footer content 
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(html => {
+            document.getElementById('footer-container').innerHTML = html;
+            });
+        </script>
+    </script>
+  </body>
+</html>
